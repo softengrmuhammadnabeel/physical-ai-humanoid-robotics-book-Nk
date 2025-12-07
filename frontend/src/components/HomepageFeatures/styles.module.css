@@ -1,0 +1,209 @@
+.features {
+  padding: 160px 0 200px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.features::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 10% 90%, rgba(34, 197, 94, 0.12), transparent 50%),
+    radial-gradient(circle at 90% 20%, rgba(139, 92, 246, 0.15), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 120px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 58px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+  color: white;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #10b981, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 21px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Module Card */
+.moduleCard {
+  position: relative;
+  height: 360px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.moduleCard:hover {
+  transform: translateY(-20px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.moduleCard[data-capstone="true"] {
+  grid-column: 1 / -1;
+  height: 400px;
+}
+
+.moduleCard[data-capstone="true"] .moduleTitle {
+  font-size: 36px;
+}
+
+/* Header inside card */
+.cardHeader {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  right: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.moduleNumber {
+  font-size: 72px;
+  font-weight: 900;
+  opacity: 0.15;
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.weekLabel {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Body */
+.cardBody {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  z-index: 10;
+}
+
+.moduleTitle {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  color: white;
+}
+
+.moduleDesc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Gradient + Glow */
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--tw-gradient-stops));
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+
+.moduleCard:hover .gradientOverlay {
+  opacity: 1;
+}
+
+.glowEffect {
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 80px 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.moduleCard:hover .glowEffect {
+  opacity: 1;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.startButton {
+  background: white;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 48px;
+  border-radius: 16px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.startButton:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title { font-size: 44px; }
+  .subtitle { font-size: 18px; }
+  .grid { padding: 0 24px; gap: 24px; }
+  .moduleTitle { font-size: 24px; }
+  .moduleCard[data-capstone="true"] .moduleTitle { font-size: 30px; }
+}

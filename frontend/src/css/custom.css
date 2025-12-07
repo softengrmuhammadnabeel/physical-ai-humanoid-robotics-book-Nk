@@ -1,0 +1,260 @@
+/* src/css/custom.css — GOOGLE DEVELOPER DOCS 2025 (PERFECT REPLICA) */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Text:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+
+/* === Google Core Colors === */
+:root {
+  --g-blue: #1a73e8;
+  --g-blue-hover: #0d5bbf;
+  --g-green: #137333;
+  --g-yellow: #f9ab00;
+  --g-red: #d93025;
+
+  --ifm-color-primary: var(--g-blue);
+  --ifm-color-primary-dark: #1669c1;
+  --ifm-color-primary-darker: #1357a6;
+  --ifm-color-primary-darkest: #0d4781;
+  --ifm-color-primary-light: #3d8ff0;
+  --ifm-color-primary-lighter: #5ea0f5;
+  --ifm-color-primary-lightest: #8ab4f8;
+
+  /* Google Docs Light Theme */
+  --doc-bg: #ffffff;
+  --doc-surface: #f8f9fa;
+  --doc-text: #202124;
+  --doc-text-secondary: #5f6368;
+  --doc-text-muted: #80868b;
+  --doc-border: #dadce0;
+  --doc-hover: #f1f3f4;
+  --doc-code-bg: #f1f3f4;
+  --doc-active-bg: #e8f0fe;
+  --doc-active-text: #185abc;
+  --doc-sidebar-bg: #ffffff;
+  --doc-sidebar-border: #dadce0;
+}
+
+/* Google Docs Dark Theme (Perfect Match) */
+[data-theme='dark'] {
+  --ifm-color-primary: #8ab4f8;
+  --ifm-color-primary-dark: #6699ff;
+  --ifm-color-primary-darker: #4285f4;
+  --ifm-color-primary-darkest: #3367d6;
+
+  --doc-bg: #000000;
+  --doc-surface: #1f1f1f;
+  --doc-text: #e8eaed;
+  --doc-text-secondary: #9aa0a6;
+  --doc-text-muted: #80868b;
+  --doc-border: #3c4043;
+  --doc-hover: #353536;
+  --doc-code-bg: #2d2d2d;
+  --doc-active-bg: #1a73e830;
+  --doc-active-text: #8ab4f8;
+  --doc-sidebar-bg: #1f1f1f;
+  --doc-sidebar-border: #3c4043;
+}
+
+/* === Typography === */
+html, body {
+  font-family: 'Google Sans Text', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--doc-text);
+  background: var(--doc-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin: 2.4rem 0 1rem;
+  color: var(--doc-text);
+}
+
+h1 { font-size: 2.5rem; margin-top: 0; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+/* === Layout === */
+.theme-doc-markdown {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.navbar {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  background: var(--doc-bg);
+  border-bottom: 1px solid var(--doc-border);
+}
+
+.navbar__brand {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
+/* === Sidebar — Exact Google Replica === */
+.theme-doc-sidebar-container {
+  background: var(--doc-sidebar-bg) !important;
+  border-right: 1px solid var(--doc-sidebar-border) !important;
+}
+
+.menu {
+  padding: 0;
+}
+
+.menu__list {
+  padding: 0.5rem 0;
+}
+
+.menu__list-item {
+  margin: 1;
+}
+
+.menu__link {
+  padding: 0.5rem 1.5rem;
+  font-size: 14px;
+  color: var(--doc-text-secondary);
+  border-radius: 0;
+  transition: background 0.2s;
+}
+
+.menu__link:hover {
+  background: var(--doc-hover);
+  color: var(--doc-text);
+}
+
+.menu__link--active {
+  background: var(--doc-active-bg);
+  color: var(--doc-active-text);
+  font-weight: 500;
+  position: relative;
+}
+
+.menu__link--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 4px;
+  background: var(--g-blue);
+  border-radius: 0 2px 2px 0;
+}
+
+[data-theme='dark'] .menu__link--active::before {
+  background: #8ab4f8;
+}
+
+/* === Code Blocks === */
+code {
+  font-family: 'Roboto Mono', monospace;
+  background: var(--doc-code-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+pre {
+  background: var(--doc-code-bg) !important;
+  border: 1px solid var(--doc-border);
+  border-radius: 8px;
+  padding: 1rem !important;
+  overflow-x: auto;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13.5px;
+}
+
+/* === Buttons === */
+.button {
+  border-radius: 8px !important;
+  font-weight: 500;
+}
+
+.button--primary {
+  background: var(--g-blue);
+  border: none;
+}
+
+.button--primary:hover {
+  background: var(--g-blue-hover);
+}
+
+/* === Breadcrumbs === */
+.theme-doc-breadcrumbs {
+  font-size: 14px;
+  color: var(--doc-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.theme-doc-breadcrumbs a {
+  color: var(--g-blue);
+  text-decoration: none;
+}
+
+.theme-doc-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* === Table of Contents (On this page) === */
+.table-of-contents {
+  font-size: 14px;
+}
+
+.table-of-contents__link {
+  color: var(--doc-text-secondary);
+}
+
+.table-of-contents__link--active {
+  color: var(--g-blue);
+  font-weight: 500;
+}
+
+/* === Footer === */
+.footer {
+  background: var(--doc-surface);
+  border-top: 1px solid var(--doc-border);
+  color: var(--doc-text-secondary);
+}
+
+/* === Dark Mode Perfection === */
+[data-theme='dark'] .navbar,
+[data-theme='dark'] .footer {
+  background: #060C15;
+  border-color: #3c4043;
+}
+
+[data-theme='dark'] .navbar__link,
+[data-theme='dark'] .footer__link-item {
+  color: #e8eaed;
+}
+
+/* === Custom Button (if you have any) === */
+.chapter-translator-button {
+  background: var(--g-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chapter-translator-button:hover {
+  background: var(--g-blue-hover);
+}
+
+[data-theme='dark'] .chapter-translator-button {
+  background: #8ab4f8;
+  color: #202124;
+}
+
+[data-theme='dark'] .chapter-translator-button:hover {
+  background: #6699ff;
+}
