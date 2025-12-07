@@ -32,7 +32,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // editUrl:
-          //   'https://github.com/softengrmuhammadnabeel/physical-ai-humanoid-robotics-book',
+          //   'https://github.com/softengrmuhammadnabeel/physical-ai-humanoid-robotics-book-Nk',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -60,7 +60,7 @@ const config: Config = {
           label: 'Course', // Changed from Tutorial to Chapters
         },
         {
-          href: 'https://github.com/softengrmuhammadnabeel/physical-ai-humanoid-robotics-book',
+          href: 'https://github.com/softengrmuhammadnabeel/physical-ai-humanoid-robotics-book-Nk',
           label: 'GitHub',
           position: 'right',
         },

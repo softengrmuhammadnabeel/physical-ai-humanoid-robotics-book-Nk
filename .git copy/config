@@ -8,7 +8,7 @@
 [submodule]
 	active = .
 [remote "origin"]
-	url = https://github.com/softengrmuhammadnabeel/physical-ai-humanoid-robotics-book.git
+	url = https://github.com/softengrmuhammadnabeel/physical-ai-humanoid-robotics-book-Nk.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "main"]
 	remote = origin
