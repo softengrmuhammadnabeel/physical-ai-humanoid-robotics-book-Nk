@@ -100,7 +100,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/your-org/physical-ai-book',
+              href: 'https://github.com/softengrmuhammadnabeel/physical-ai-humanoid-robotics-book-Nk',
             },
           ],
         },
