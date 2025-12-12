@@ -36,8 +36,6 @@ const sidebars: SidebarsConfig = {
         'module-1/urdf-basics',
         'module-1/humanoid-urdf',
         'module-1/ros2-control',
-        'module-1/joint-trajectory-controller',
-        'module-1/diff-drive-vs-bipedal',
         {
           type: 'category',
           label: 'Hands-on Projects',
@@ -115,7 +113,6 @@ const sidebars: SidebarsConfig = {
         'module-4/llm-action-parsing',
         'module-4/prompt-engineering-robotics',
         'module-4/openai-gpt-4o-realtime',
-        'module-4/local-llms-llama3',
         'module-4/action-tokenization',
         'module-4/training-vla-isaac',
         {
